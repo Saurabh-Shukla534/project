@@ -1,0 +1,24 @@
+{
+  "register": [
+    {
+      "name": "Saurabh Shukla",
+      "email": "shuklasaurabh534@gmail.com",
+      "mobileNumber": "9935620733",
+      "dob": "1997-05-26T18:30:00.000Z",
+      "state": "Uttar Pradesh",
+      "city": "Kanpur",
+      "pinCode": "208014",
+      "id": 2
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "mobileNumber": "9999998888",
+      "dob": "2021-07-08T18:30:00.000Z",
+      "state": "Andhra Pradesh",
+      "city": "asc",
+      "pinCode": "212121",
+      "id": 3
+    }
+  ]
+}

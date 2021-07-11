@@ -19,6 +19,36 @@
       "city": "asc",
       "pinCode": "212121",
       "id": 3
+    },
+    {
+      "name": "Test1",
+      "email": "test1@gmail.com",
+      "mobileNumber": "7777777777",
+      "dob": "2021-07-22T18:30:00.000Z",
+      "state": "Telangana",
+      "city": "xyz",
+      "pinCode": "111111",
+      "id": 4
+    },
+    {
+      "name": "Rohit Verma",
+      "email": "rohit@gmail.com",
+      "mobileNumber": "9898989898",
+      "dob": "2007-04-06T18:30:00.000Z",
+      "state": "Maharashtra",
+      "city": "Mumbai",
+      "pinCode": "555888",
+      "id": 7
+    },
+    {
+      "name": "Shubham",
+      "email": "shubham@gmail.com",
+      "mobileNumber": "2121212121",
+      "dob": "2016-06-06T18:30:00.000Z",
+      "state": "Bihar",
+      "city": "Munger",
+      "pinCode": "555555",
+      "id": 8
     }
   ]
 }

@@ -1,0 +1,11 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.spacer {
+    flex: auto;
+}
+
+mat-sidenav {
+    width: 250px;
+}

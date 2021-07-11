@@ -1,3 +1,8 @@
 mat-form-field {
     font-size: large;
+    width: 90%;
+}
+
+h2 {
+    color : rgb(247, 120, 62);
 }

@@ -8,8 +8,9 @@ import { RegistrationService } from '../shared/registration.service';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit {
-
+  title: string = "Student's Form";
   detailsForm!: FormGroup
+  submitted: boolean = false;
 
   get email() {
     return this.detailsForm.get('email');
@@ -68,6 +69,7 @@ export class FormsComponent implements OnInit {
   }
 
   onSubmit() {
+    this.submitted = true;
     console.log(this.detailsForm.value);
     this._registrationService.register(this.detailsForm.value)
       .subscribe(

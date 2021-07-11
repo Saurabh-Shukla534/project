@@ -1,7 +1,7 @@
 <div class="contained-fluid">
-    <h2>Student's Form</h2>
-    {{detailsForm.value | json}}
-    <form [formGroup]="detailsForm" (ngSubmit)="onSubmit()">
+    <h2>{{title}}</h2>
+    <!-- {{detailsForm.value | json}} -->
+    <form [formGroup]="detailsForm" *ngIf="!submitted" (ngSubmit)="onSubmit()">
         <mat-grid-list cols="3" rowHeight="120px">
             <mat-grid-tile>
                 <mat-form-field appearance="fill" class="form-group">
@@ -72,6 +72,6 @@
                 </mat-grid-tile>
             </div>
         </mat-grid-list>
-        <button mat-raised-button type="submit" color="primary">Submit</button>
+        <button mat-raised-button type="submit" color="warn">Submit</button>
     </form>
 </div>

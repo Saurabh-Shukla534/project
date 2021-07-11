@@ -8,12 +8,16 @@ import { FormsComponent } from './forms/forms.component';
 import { MaterialModule } from './material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './table/table.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormsComponent
+    FormsComponent,
+    TableComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

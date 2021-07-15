@@ -1,54 +1,164 @@
 {
   "register": [
     {
-      "name": "Saurabh Shukla",
+      "id": 2,
+      "name": "Saurabh",
       "email": "shuklasaurabh534@gmail.com",
       "mobileNumber": "9935620733",
       "dob": "1997-05-26T18:30:00.000Z",
-      "state": "Uttar Pradesh",
-      "city": "Kanpur",
-      "pinCode": "208014",
-      "id": 2
-    },
-    {
-      "name": "test",
-      "email": "test@gmail.com",
-      "mobileNumber": "9999998888",
-      "dob": "2021-07-08T18:30:00.000Z",
-      "state": "Andhra Pradesh",
-      "city": "asc",
-      "pinCode": "212121",
-      "id": 3
-    },
-    {
-      "name": "Test1",
-      "email": "test1@gmail.com",
-      "mobileNumber": "7777777777",
-      "dob": "2021-07-22T18:30:00.000Z",
       "state": "Telangana",
-      "city": "xyz",
-      "pinCode": "111111",
-      "id": 4
+      "city": "Kanpur Nagar",
+      "pinCode": "208014"
     },
     {
+      "id": 7,
       "name": "Rohit Verma",
       "email": "rohit@gmail.com",
       "mobileNumber": "9898989898",
       "dob": "2007-04-06T18:30:00.000Z",
       "state": "Maharashtra",
       "city": "Mumbai",
-      "pinCode": "555888",
-      "id": 7
+      "pinCode": "555888"
     },
     {
+      "id": 8,
       "name": "Shubham",
       "email": "shubham@gmail.com",
       "mobileNumber": "2121212121",
       "dob": "2016-06-06T18:30:00.000Z",
       "state": "Bihar",
       "city": "Munger",
-      "pinCode": "555555",
-      "id": 8
+      "pinCode": "555555"
+    },
+    {
+      "id": 9,
+      "name": "Arwaz",
+      "email": "Arwaz@gmail.com",
+      "mobileNumber": "9879879877",
+      "dob": "2021-07-12T18:30:00.000Z",
+      "state": "Delhi",
+      "city": "Delhi",
+      "pinCode": "202020"
+    },
+    {
+      "id": 11,
+      "name": "Dipak",
+      "email": "dipak@gmail.com",
+      "mobileNumber": "7892145632",
+      "dob": "2021-07-08T18:30:00.000Z",
+      "state": "Delhi",
+      "city": "Mumbai",
+      "pinCode": "741258"
+    },
+    {
+      "name": "qwert",
+      "email": "qwert@gmail.com",
+      "mobileNumber": "3214569875",
+      "dob": "2021-05-02T18:30:00.000Z",
+      "state": "Maharashtra",
+      "city": "mumbai",
+      "pinCode": "654654",
+      "id": 12
+    },
+    {
+      "id": 13,
+      "name": "akash",
+      "email": "akash@gmail.com",
+      "mobileNumber": "9874563214",
+      "dob": "2021-07-10T18:30:00.000Z",
+      "state": "Maharashtra",
+      "city": "mumbai",
+      "pinCode": "878458"
+    },
+    {
+      "id": 14,
+      "name": "Diksha verma",
+      "email": "manav@gmail.com",
+      "mobileNumber": "1234567899",
+      "dob": "2021-06-30T18:30:00.000Z",
+      "state": "Arunachal Pradesh",
+      "city": "mumbai",
+      "pinCode": "987456"
+    },
+    {
+      "id": 15,
+      "name": "Amar Shukla",
+      "email": "amar@gmail.com",
+      "mobileNumber": "8745213695",
+      "dob": "2021-07-03T18:30:00.000Z",
+      "state": "Chhattisgarh",
+      "city": "Delhi",
+      "pinCode": "741852"
+    },
+    {
+      "id": 17,
+      "name": "Anupam",
+      "email": "anupam@gmail.com",
+      "mobileNumber": "3216549878",
+      "dob": "2021-07-11T18:30:00.000Z",
+      "state": "West Bengal",
+      "city": "kolkata",
+      "pinCode": "213587"
+    },
+    {
+      "id": 18,
+      "name": "Anupam",
+      "email": "sharma@gmail.com",
+      "mobileNumber": "3216549878",
+      "dob": "2021-07-11T18:30:00.000Z",
+      "state": "Himachal Pradesh",
+      "city": "shimla",
+      "pinCode": "213456"
+    },
+    {
+      "id": 19,
+      "name": "rajesh",
+      "email": "Rakesh@gmail.com",
+      "mobileNumber": "7899999998",
+      "dob": "2021-06-30T18:30:00.000Z",
+      "state": "Uttar Pradesh",
+      "city": "lucknow",
+      "pinCode": "789654"
+    },
+    {
+      "id": 20,
+      "name": "Ajay Kumar",
+      "email": "shuklasaurabh534@gmail.com",
+      "mobileNumber": "9935620733",
+      "dob": "1997-05-26T18:30:00.000Z",
+      "state": "Bihar",
+      "city": "patna",
+      "pinCode": "208014"
+    },
+    {
+      "id": 21,
+      "name": "Rajat Yadav",
+      "email": "rajat@gmail.com",
+      "mobileNumber": "5412369875",
+      "dob": "2021-07-11T18:30:00.000Z",
+      "state": "Rajasthan",
+      "city": "Jodhpur",
+      "pinCode": "657858"
+    },
+    {
+      "id": 22,
+      "name": "Vivek Kumar",
+      "email": "vivek@gmail.com",
+      "mobileNumber": "7418529635",
+      "dob": "2021-07-03T18:30:00.000Z",
+      "state": "Bihar",
+      "city": "Chhapra",
+      "pinCode": "258852"
+    },
+    {
+      "name": "arjun",
+      "email": "arjun@gmail.com",
+      "mobileNumber": "9898745632",
+      "dob": "2021-07-03T18:30:00.000Z",
+      "state": "Punjab",
+      "city": "Amritsar",
+      "pinCode": "215141",
+      "id": 23
     }
   ]
 }

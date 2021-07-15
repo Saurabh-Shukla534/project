@@ -13,6 +13,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 const Material = [
   MatFormFieldModule,
@@ -28,7 +32,11 @@ const Material = [
   MatIconModule,
   MatSidenavModule,
   MatDividerModule,
-  MatListModule
+  MatListModule,
+  MatDialogModule,
+  FormsModule,
+  ReactiveFormsModule,
+  MatPaginatorModule
 ];
 
 @NgModule({

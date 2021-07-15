@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router} from '@angular/router';
+import { IRegister } from 'src/register';
 import { RegistrationService } from '../shared/registration.service';
 
 @Component({
@@ -9,10 +12,12 @@ import { RegistrationService } from '../shared/registration.service';
 })
 export class FormsComponent implements OnInit {
   title: string = "Student's Form";
-  detailsForm!: FormGroup
+  detailsForm!: FormGroup;
   submitted: boolean = false;
+  todayDate = new Date;
+  disabled: boolean = false;
 
-  get email() {
+  get emails() {
     return this.detailsForm.get('email');
   }
 
@@ -22,6 +27,7 @@ export class FormsComponent implements OnInit {
     {name: 'Assam', value: 'Assam'},
     {name: 'Bihar', value: 'Bihar'},
     {name: 'Chhattisgarh', value: 'Chhattisgarh'},
+    {name: 'Delhi', value: 'Delhi'},
     {name: 'Goa', value: 'Goa'},
     {name: 'Gujarat', value: 'Gujarat'},
     {name: 'Haryana', value: 'Haryana'},
@@ -54,31 +60,56 @@ export class FormsComponent implements OnInit {
     return (this.detailsForm.get('email')?.hasError('email') ? 'Not a valid email' : '');
   }
 
-  constructor(private fb: FormBuilder, private _registrationService: RegistrationService) { }
+  constructor(private fb: FormBuilder, private _registrationService: RegistrationService, private router: Router,
+    @Inject(MAT_DIALOG_DATA) public data: IRegister, public dialogRef: MatDialogRef<FormsComponent>  ) { }
 
   ngOnInit(): void {
     this.detailsForm = this.fb.group({
+      id: [''],
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25)]],
       email: ['', [Validators.required, Validators.email]],
       mobileNumber: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
-      dob: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
-      state: [''],
-      city: [''],
-      pinCode: ['', [Validators.minLength(6), Validators.maxLength(6)]]
-    }) 
+      dob: ['', [Validators.required]],
+      state: ['', [Validators.required]],
+      city: ['', [Validators.required]],
+      pinCode: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(6)]]
+    })
+    
+    if(this.data.id) {
+      this.detailsForm.setValue({
+        id: this.data.id,
+        name: this.data.name,
+        email: this.data.email,
+        dob: this.data.dob,
+        mobileNumber: this.data.mobileNumber,
+        state: this.data.state,
+        city: this.data.city,
+        pinCode: this.data.pinCode
+      });
+    }
   }
-
+  
   onSubmit() {
-    this.submitted = true;
-    console.log(this.detailsForm.value);
-    this._registrationService.register(this.detailsForm.value)
-      .subscribe(
-        response => console.log('Success', response),
-        error => console.error('Error', error)
-      )
+    this.save();    
   }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 
+  close() {
+    this.dialogRef.close();
+  }
+
+  save() {
+    if(this.detailsForm.errors){
+      return;
+    }
+    else if(this.data && (this.data.id === this.detailsForm.value.id)) {
+      this.dialogRef.close({id: this.detailsForm.value.id, name: this.detailsForm.value.name, email:this.detailsForm.value.email, mobileNumber: this.detailsForm.value.mobileNumber, dob: this.detailsForm.value.dob, state: this.detailsForm.value.state, city: this.detailsForm.value.city, pinCode: this.detailsForm.value.pinCode})
+    }
+    else {
+      this.dialogRef.close({name: this.detailsForm.value.name, email:this.detailsForm.value.email, mobileNumber: this.detailsForm.value.mobileNumber, dob: this.detailsForm.value.dob, state: this.detailsForm.value.state, city: this.detailsForm.value.city, pinCode: this.detailsForm.value.pinCode})
+    }
+  }
 }
-// Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur'
-// 'Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttarakhand','Uttar Pradesh','West Bengal

@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http"
-import { IRegister } from "src/register";
 
 @Injectable({
     providedIn: 'root'
@@ -14,11 +13,15 @@ export class RegistrationService {
         return this._http.post<any>(this._url, userData)
     }
 
-    studentDetails() {
+    public studentDetails() {
         return this._http.get(this._url)
     }
 
-    deleteRecords(student: any) {
+    public deleteRecords(student: any) {
         return this._http.delete(this._url + "/" + student.id);
+    }
+
+    public updateRecords(id: number,student: any) {
+        return this._http.put(this._url + `/${id}`, student);
     }
 }
